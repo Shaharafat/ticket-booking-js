@@ -46,6 +46,7 @@ function totalTicketCount() {
   return [parseInt(firstClassTicket.value) , parseInt(economyClassTicket.value)];
 }
 
+// this function runs when ticket count changes.
 function updateTicketQuantity(event, newQuantity) {
   let parentElement = event.target.closest("#ticket-input");
   let previousQuantity = parentElement.querySelector("#ticket-count").value;
