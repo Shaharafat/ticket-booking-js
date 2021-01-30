@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content">
+            <h1>Mega City Bus</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+            <section id="success-message" class="f-class success-section hide">
+                <span class="success-icon"><i class="far fa-check-circle"></i></span>
+                <div class="f-class success-details-content">
+                    <h3 class="success-text">Booking Successful</h3>
+                    <p id="success-details" class="success-details-message">You have successfully paid.</p>
+                </div>
+                <span class="success-message-hide"><i class="fas fa-times"></i></span>
+            </section>
+            <section class="booking-form">
+                <h3>Explore By Bus</h3>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">From</label>
+                        <input class="inp-style" type="text" name="" placeholder="Dhaka">
+                    </div>
+                    <div class="input-group">
+                        <label" for="">From</label>
+                        <input class="inp-style" type="text" name="" placeholder="Chittagong">
+                    </div>
+                </div>
+
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+                <div class="inputs">
+                    <div id="ticket-input" class="input-group f-class">
+                        <div>
+                            <label for="">First Class ($150)</label>
+                            <input id="ticket-count" class=" ticket-input inp-style inp-width" type="number" value="0" >
+                        </div>
+                        <div class="plus-minus-btn f-class">
+                            <button class="plus-btn" id="increase-count"><i class="fas fa-plus"></i></button>
+                            <button class="minus-btn" id="decrease-count"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div id="ticket-input" class="input-group f-class">
+                        <div>
+                            <label for="">Economy ($100)</label>
+                            <input id="ticket-count" class=" ticket-input inp-style inp-width" type="number" value="0" >
+                        </div>
+                        <div class="plus-minus-btn f-class">
+                            <button class="plus-btn" id="increase-count"><i class="fas fa-plus"></i></button>
+                            <button class="minus-btn" id="decrease-count"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="subtotal">0</span></p>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="vat">0</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="total">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-style">Book Now</button>
+                <small id="warning" class="warning-text hide">Please select at least one ticket first.</small>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+    <!--Thank You-->
+</body>
+
+</html>
