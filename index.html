@@ -36,23 +36,25 @@
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
         <div>
+            <!-- Success Message Section. It Shows When Booking Completed -->
             <section id="success-message" class="f-class success-section hide">
                 <span class="success-icon"><i class="far fa-check-circle"></i></span>
                 <div class="f-class success-details-content">
                     <h3 class="success-text">Booking Successful</h3>
                     <p id="success-details" class="success-details-message">You have successfully paid.</p>
                 </div>
-                <span class="success-message-hide"><i class="fas fa-times"></i></span>
+                <span onclick="closeSuccessSection()" class="success-message-hide"><i class="fas fa-times"></i></span>
             </section>
+            <!-- Booking Form -->
             <section class="booking-form">
                 <h3>Explore By Bus</h3>
                 <div class="inputs">
                     <div class="input-group">
                         <label" for="">From</label>
-                        <input class="inp-style" type="text" name="" placeholder="Dhaka">
+                        <input class="inp-style" type="text" name="" placeholder="Dhaka" required>
                     </div>
                     <div class="input-group">
-                        <label" for="">From</label>
+                        <label" for="">To</label>
                         <input class="inp-style" type="text" name="" placeholder="Chittagong">
                     </div>
                 </div>
@@ -74,8 +76,8 @@
                             <input id="ticket-count" class=" ticket-input inp-style inp-width" type="number" value="0" >
                         </div>
                         <div class="plus-minus-btn f-class">
-                            <button class="plus-btn" id="increase-count"><i class="fas fa-plus"></i></button>
-                            <button class="minus-btn" id="decrease-count"><i class="fas fa-minus"></i></button>
+                            <button onclick="updateTicketQuantity(event,1)" class="plus-btn" id="increase-count"><i class="fas fa-plus"></i></button>
+                            <button onclick="updateTicketQuantity(event, -1)" class="minus-btn" id="decrease-count"><i class="fas fa-minus"></i></button>
                         </div>
                     </div>
                     <div id="ticket-input" class="input-group f-class">
@@ -84,8 +86,8 @@
                             <input id="ticket-count" class=" ticket-input inp-style inp-width" type="number" value="0" >
                         </div>
                         <div class="plus-minus-btn f-class">
-                            <button class="plus-btn" id="increase-count"><i class="fas fa-plus"></i></button>
-                            <button class="minus-btn" id="decrease-count"><i class="fas fa-minus"></i></button>
+                            <button onclick="updateTicketQuantity(event,1)" class="plus-btn" id="increase-count"><i class="fas fa-plus"></i></button>
+                            <button onclick="updateTicketQuantity(event,-1)" class="minus-btn" id="decrease-count"><i class="fas fa-minus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -117,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn-style">Book Now</button>
+                <button onclick="handleBooking()" class="btn-style">Book Now</button>
                 <small id="warning" class="warning-text hide">Please select at least one ticket first.</small>
             </div>
         </div>
